@@ -113,7 +113,7 @@
             .then(res => res.json())
             .then(rawData => {
                 if (rawData && rawData.length > 0) {
-                    renderModernChart(rawData.reverse().slice(0, 30)); 
+                    renderModernChart(rawData.reverse().slice(0, 20)); 
                     document.getElementById('last-update').innerText = "Last Update: " + new Date().toLocaleTimeString();
                     conn.innerText = "? Connected (Live)";
                     conn.style.color = "#22c55e";
