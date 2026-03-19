@@ -36,6 +36,44 @@
 
         canvas { position: absolute; top: 0; left: 0; pointer-events: none; z-index: 1; }
         .footer-info { display: flex; justify-content: space-between; font-size: 11px; color: #64748b; margin-top: 20px; }
+        /* WIN အတွက် မိတ်တုပ်မိတ်တုပ် Animation */
+        @keyframes win-blink {
+            0% { background: rgba(34, 197, 94, 0.15); box-shadow: 0 0 0px rgba(34, 197, 94, 0); }
+            50% { background: rgba(34, 197, 94, 0.4); box-shadow: 0 0 10px rgba(34, 197, 94, 0.5); }
+            100% { background: rgba(34, 197, 94, 0.15); box-shadow: 0 0 0px rgba(34, 197, 94, 0); }
+        }
+
+        /* LOSS အတွက် မိတ်တုပ်မိတ်တုပ် Animation */
+        @keyframes loss-blink {
+            0% { background: rgba(239, 68, 68, 0.15); box-shadow: 0 0 0px rgba(239, 68, 68, 0); }
+            50% { background: rgba(239, 68, 68, 0.4); box-shadow: 0 0 10px rgba(239, 68, 68, 0.5); }
+            100% { background: rgba(239, 68, 68, 0.15); box-shadow: 0 0 0px rgba(239, 68, 68, 0); }
+        }
+
+        /* တကယ်အလုပ်လုပ်မည့် CSS Class များ */
+        .win-text { 
+            color: #22c55e; 
+            background: rgba(34, 197, 94, 0.15); 
+            padding: 4px 8px; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            width: 70px; 
+            text-align: center;
+            /* Animation ထည့်သွင်းခြင်း */
+            animation: win-blink 1.5s infinite; 
+        }
+
+        .loss-text { 
+            color: #ef4444; 
+            background: rgba(239, 68, 68, 0.15); 
+            padding: 4px 8px; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            width: 70px; 
+            text-align: center;
+            /* Animation ထည့်သွင်းခြင်း */
+            animation: loss-blink 1.5s infinite; 
+        }
     </style>
 </head>
 <body>
